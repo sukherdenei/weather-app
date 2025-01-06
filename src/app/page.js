@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Left from "./components/Left";
-import Right from "./components/right";
+import Right from "./components/Right";
 import Circle from "./components/Circle";
 
 export default function Home() {
@@ -34,12 +34,20 @@ export default function Home() {
     //     />
     //   </div>
     // </div>
-    <div className="flex w-[1299px] h-[820px] bg-orange-500  items-center justify-center	">
-      <Circle />
+    <div className="flex w-[1460px] h-[828px] bg-orange-500  items-center justify-center">
+      {/* <Circle />
       <div className="flex m-auto gap-5">
-        <Left />
-        <Right />
-      </div>
+        <div className="bg-red w-[567px] h-[828px] ">
+          <Left />
+          <Footer />
+        </div>
+        <div>
+          <Right />
+        </div>
+      </div> */}
+      <Circle />
+      <Left />
+      <Right />
     </div>
   );
 }
