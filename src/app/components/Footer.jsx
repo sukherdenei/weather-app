@@ -1,39 +1,29 @@
 const Footer = () => {
   return (
-    <div className="flex gap-[15px] w-[318px] h-[32px] m-auto justify-between	">
+    <div className="flex w-[318px] h-[32px]  justify-center gap-10	absolute items-center ">
       <svg
+        className=""
         xmlns="http://www.w3.org/2000/svg"
         width="32"
         height="32"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="lucide lucide-house text-gray-800"
-      >
-        <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
-        <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-      </svg>
-      <svg
-        width="33"
-        height="32"
-        viewBox="0 0 33 32"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 32 32"
+        fill="black"
       >
         <path
-          d="M18.8101 25.5772L23.4929 17.2151C26.556 11.7453 22.6024 5 16.3333 5C10.0643 5 6.1107 11.7453 9.17378 17.2151L13.8566 25.5772C14.9405 27.5128 17.7262 27.5128 18.8101 25.5772Z"
-          stroke="#4B5563"
+          d="M5.92428 12.541L13.9243 4.8743C15.0847 3.76225 16.9153 3.76225 18.0757 4.8743L26.0757 12.541C26.6662 13.1068 27 13.8892 27 14.7069V25C27 26.6569 25.6569 28 24 28H22H19H16H13H10H8C6.34315 28 5 26.6569 5 25V14.7069C5 13.8892 5.33385 13.1068 5.92428 12.541Z"
+          stroke="#F9FAFB"
           stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
         />
-        <circle
-          cx="16.3333"
-          cy="13"
-          r="2"
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="19"
+        height="25"
+        viewBox="0 0 19 25"
+        fill="none"
+      >
+        <path
+          d="M11.8101 21.5772L16.4929 13.2151C19.556 7.7453 15.6024 1 9.33333 1C3.06427 1 -0.889301 7.74531 2.17378 13.2151L6.85656 21.5772C7.94049 23.5128 10.7262 23.5128 11.8101 21.5772Z"
           stroke="#4B5563"
           stroke-width="2"
           stroke-linecap="round"
@@ -56,11 +46,11 @@ const Footer = () => {
         />
       </svg>
       <svg
+        xmlns="http://www.w3.org/2000/svg"
         width="32"
         height="32"
         viewBox="0 0 32 32"
         fill="none"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="M3 24.9809C3 20.6434 7.15158 17.5119 11.3222 18.7035L14.787 19.6934C15.5798 19.92 16.4202 19.92 17.213 19.6934L20.6778 18.7035C24.8484 17.5119 29 20.6434 29 24.9809C29 27.2006 27.2006 29 24.9809 29H7.01908C4.7994 29 3 27.2006 3 24.9809Z"

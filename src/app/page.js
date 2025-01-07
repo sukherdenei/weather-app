@@ -1,9 +1,10 @@
 "use client";
+// import { useState } from "react";
 import Image from "next/image";
 import Left from "./components/Left";
 import Right from "./components/Right";
 import Circle from "./components/Circle";
-
+import Input from "./components/Input";
 export default function Home() {
   return (
     // <div className="flex border-4 	border-white w-1200 m-auto gap-10 rounded-xl  border-red-600 p-10">
@@ -34,17 +35,7 @@ export default function Home() {
     //     />
     //   </div>
     // </div>
-    <div className="flex w-[1460px] h-[828px] bg-orange-500  items-center justify-center">
-      {/* <Circle />
-      <div className="flex m-auto gap-5">
-        <div className="bg-red w-[567px] h-[828px] ">
-          <Left />
-          <Footer />
-        </div>
-        <div>
-          <Right />
-        </div>
-      </div> */}
+    <div className="flex w-full h-[100vh] items-center justify-center m-auto">
       <Circle />
       <Left />
       <Right />
