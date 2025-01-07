@@ -35,6 +35,7 @@ export default function Home() {
     //     />
     //   </div>
     // </div>
+
     <div className="flex w-full h-[100vh] items-center justify-center m-auto">
       <Circle />
       <Left />
