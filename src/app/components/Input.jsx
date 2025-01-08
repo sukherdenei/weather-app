@@ -1,29 +1,6 @@
-import { useState } from "react";
-
-function Input() {
-  const [cities, setCities] = useState([]);
-  const [searched, setSearched] = useState([]);
-
-  async function getData() {
-    const result = await fetch("https://countriesnow.space/api/v0.1/countries");
-    const data = await result.json();
-    let incomeCities = data.data.map((country) => {
-      return country.cities;
-    });
-    incomeCities = incomeCities.flat();
-    setCities(incomeCities);
-  }
-  getData();
-  const searchHandler = (e) => {
-    const search = e.target.value;
-    const filtered = cities.filter((city) => {
-      return city.includes(search);
-    });
-    setSearched(filtered);
-  };
-
+function Input({ searchHandler, searched, searchHandleClick }) {
   return (
-    <div className="flex gap-10 relative items-center justify-center	">
+    <div className="relative  text-black columns-auto">
       <div className="flex">
         <svg
           className="-mr-10 relative "
@@ -44,12 +21,17 @@ function Input() {
         <input
           type="text"
           placeholder="Хайх хотоо оруулна уу"
-          className="border-2 border-silver rounded-[48px] w-[567px] h-[80px] outline-[silver] pl-5"
+          className="border-2 border-silver rounded-[48px] w-[567px] h-[80px] outline-none pl-10 columns-1"
           onChange={searchHandler}
         />
-
+      </div>
+      <div className="border-t-gray-200 border-2 ">
         {searched.length > 0 &&
-          searched.slice(0, 10).map((city) => <p>{city}</p>)}
+          searched.slice(0, 10).map((city, index) => (
+            <button key={index} onClick={() => searchHandleClick(city)}>
+              {city}
+            </button>
+          ))}
       </div>
     </div>
   );
