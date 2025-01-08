@@ -3,7 +3,7 @@ function Input({ searchHandler, searched, searchHandleClick }) {
     <div className="relative  text-black columns-auto">
       <div className="flex">
         <svg
-          className="-mr-10 relative "
+          className="-mr-20 mt-5 relative "
           width="48"
           height="48"
           viewBox="0 0 48 48"
@@ -21,16 +21,20 @@ function Input({ searchHandler, searched, searchHandleClick }) {
         <input
           type="text"
           placeholder="Хайх хотоо оруулна уу"
-          className="border-2 border-silver rounded-[48px] w-[567px] h-[80px] outline-none pl-10 columns-1"
+          className="border-2 border-silver rounded-[48px] w-[567px] h-[80px] outline-none pl-20 "
           onChange={searchHandler}
         />
       </div>
       <div className="border-t-gray-200 border-2 ">
         {searched.length > 0 &&
           searched.slice(0, 10).map((city, index) => (
-            <button key={index} onClick={() => searchHandleClick(city)}>
+            <p
+              className="cursor-pointer "
+              key={index}
+              onClick={() => searchHandleClick(city)}
+            >
               {city}
-            </button>
+            </p>
           ))}
       </div>
     </div>

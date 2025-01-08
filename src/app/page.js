@@ -5,12 +5,12 @@ import Left from "./components/Left";
 import Right from "./components/Right";
 import Circle from "./components/Circle";
 import Input from "./components/Input";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 export default function Home() {
   const [cities, setCity] = useState([]);
   const [searched, setSearched] = useState([]);
-  const [selectedcity, setSelectedciti] = useState("");
-  const [weather, setWeather] = useState("Ulaanbaatar");
+  const [selectedcity, setSelectedcity] = useState("Ulaanbaatar");
+  const [weather, setWeather] = useState("-12");
 
   async function getData() {
     const result = await fetch("https://countriesnow.space/api/v0.1/countries");
@@ -22,7 +22,10 @@ export default function Home() {
     incomeCities = incomeCities.flat();
     setCity(incomeCities);
   }
-  getData();
+  useEffect(() => {
+    getData();
+  }, []);
+  // getData();
 
   const searchHandler = (e) => {
     const search = e.target.value;
@@ -42,13 +45,13 @@ export default function Home() {
     // setWeather(data);
   }
   const searchHandleClick = (city) => {
-    setSelectedciti(city);
+    setSelectedcity(city);
     setSearched([]);
     getWeatherData(city);
   };
 
   return (
-    <div className="flex w-full h-[100vh] items-center justify-center m-auto">
+    <div className="flex w-full h-[100vh] items-center justify-center">
       <Circle />
       <Left
         searchHandler={searchHandler}
@@ -57,7 +60,11 @@ export default function Home() {
         selectedcity={selectedcity}
         searchHandleClick={searchHandleClick}
       />
-      <Right />
+      <Right
+        selectedcity={selectedcity}
+        weather={weather}
+        // searchHandler={searchHandler}
+      />
     </div>
   );
 }

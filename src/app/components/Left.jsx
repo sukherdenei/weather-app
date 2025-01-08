@@ -9,9 +9,9 @@ const Left = ({
   searchHandleClick,
   weather,
 }) => {
-  const date = "January6, 2025";
+  const date = "January 9, 2025";
   return (
-    <div className="  bg-[#D1D5DB] w-1/2 h-full rounded-xl relative pt-5 pl-20 ">
+    <div className="bg-[#D1D5DB] w-1/2 h-full rounded-xl relative pt-5 pl-20 ">
       {/* <img
         src="/Ellipse 21.png"
         alt=""
@@ -23,8 +23,8 @@ const Left = ({
         searchHandleClick={searchHandleClick}
       />
       <div className="flex justify-center ">
-        <div className="bg-[#F3F4F6] h-[832px] w-[414px] border-2 border-[#D1D5DB] rounded-[30px]">
-          <p className="text-xl text-gray-400  pl-5 mt-5 ">{date}</p>
+        <div className="bg-[#F3F4F6] h-[832px] w-[414px] border-2 border-[#D1D5DB] rounded-[30px] ">
+          <p className="text-xl text-gray-400  pl-5 mt-5  ">{date}</p>
           <h1 className="text-4xl text-black  pl-5 flex ">
             {selectedcity}
             <img
