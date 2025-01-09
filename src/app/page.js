@@ -13,7 +13,8 @@ export default function Home() {
   const [weather, setWeather] = useState("-12");
   const [night, setNight] = useState("");
   const [daynight, setDaynight] = useState("");
-  // const [pic, setPic] = useState("");
+  const [rightdaynight, setRightdaynight] = useState("Cloudy");
+  const [pic, setPic] = useState("Sunny");
 
   async function getData() {
     const result = await fetch("https://countriesnow.space/api/v0.1/countries");
@@ -48,6 +49,7 @@ export default function Home() {
     setSelectedcity(city);
     setNight(data.forecast.forecastday[0].hour[0].temp_c);
     setDaynight(data.forecast.forecastday[0].day.condition.text);
+    setRightdaynight(data.forecast.forecastday[0].hour[0].condition.text);
     // setPic(data.forecast.forecastday[0].day.condition.icon);
   }
   useEffect(() => {
@@ -69,6 +71,14 @@ export default function Home() {
   //     retunr("Sun");
   //   }
   // };
+  const changePic = () => {
+    if (pic === "Sunny") {
+      setPic("Clouds.png");
+    } else if (pic === "Clouds.png") {
+      setPic("Sunny");
+    }
+  };
+
   return (
     <div className="flex w-full h-[100vh] items-center justify-center">
       <Circle />
@@ -88,6 +98,7 @@ export default function Home() {
         night={night}
         setNight={setNight}
         daynight={daynight}
+        rightdaynight={rightdaynight}
       />
     </div>
   );

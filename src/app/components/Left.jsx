@@ -10,6 +10,7 @@ const Left = ({
   weather,
   night,
   daynight,
+  pic,
 }) => {
   // const date = d.getFullYear();
   // const date = new Date();

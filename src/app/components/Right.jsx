@@ -1,6 +1,6 @@
 import Weather from "../Weather";
 // import Celsius from "./Celsius";
-const Right = ({ selectedcity, night, daynight }) => {
+const Right = ({ selectedcity, night, daynight, rightdaynight }) => {
   return (
     <div className=" bg-[#0F141E] w-1/2 h-full relative flex items-center justify-center pt-5 pl-20 rounded-xl">
       <div className="  bg-[rgba(17,24,39)] h-[832px] w-[414px] border-2 border-[#111827BF] rounded-[30px]">
@@ -16,9 +16,9 @@ const Right = ({ selectedcity, night, daynight }) => {
 
         <img src="/moon.png" alt="" className="m-auto mt-10" />
         <h1 className="w-[209px] h-[203px] m-auto text-7xl text-gray-400 font-extrabold	">
-          {night}
+          {night}°C
           <p className=" text-[#777CCE] text-[24px] font-extrabold	 w-[74px] h-[33px] mt-5">
-            Clear
+            {rightdaynight}
           </p>
         </h1>
         <div className="footer flex justify-center gap-6 cursor-pointer hover:bg-blue-950  ">
