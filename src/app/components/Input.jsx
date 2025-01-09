@@ -25,11 +25,11 @@ function Input({ searchHandler, searched, searchHandleClick }) {
           onChange={searchHandler}
         />
       </div>
-      <div className="border-t-gray-200 border-2 ">
+      <div className="border-blue-500  bg-white absolute flex flex-col gap-3 rounded-2xl ">
         {searched.length > 0 &&
           searched.slice(0, 10).map((city, index) => (
             <p
-              className="cursor-pointer "
+              className="cursor-pointer text-2xl"
               key={index}
               onClick={() => searchHandleClick(city)}
             >

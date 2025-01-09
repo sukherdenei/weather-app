@@ -8,8 +8,13 @@ const Left = ({
   selectedcity,
   searchHandleClick,
   weather,
+  night,
+  daynight,
 }) => {
-  const date = "January 9, 2025";
+  // const date = d.getFullYear();
+  // const date = new Date();
+  const date = "2025-01-09 12:12 pm";
+
   return (
     <div className="bg-[#D1D5DB] w-1/2 h-full rounded-xl relative pt-5 pl-20 ">
       {/* <img
@@ -33,9 +38,8 @@ const Left = ({
               className="w-[32px] h-[32px] ml-32"
             />
           </h1>
-
           <Weather />
-          <Celsius weather={weather} />
+          <Celsius weather={weather} night={night} daynight={daynight} />
           <Footer />
         </div>
       </div>
