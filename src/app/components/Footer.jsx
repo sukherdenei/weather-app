@@ -1,11 +1,11 @@
 const Footer = () => {
   return (
-    <div className="flex w-[318px] h-[32px]  justify-center gap-10	absolute items-center  ">
-      <div className="footer flex justify-center gap-6 cursor-pointer ">
-        <img className="fill-[#09090b] " src="/Home.png" alt="" />
-        <img src="/localization_icon.png" alt="" />
-        <img src="/Heart.png" alt="" />
-        <img src="/User.png" alt="" />
+    <div className="flex w-[318px] h-[32px] justify-center gap-10	absolute items-center mt-5  ">
+      <div className="footer flex justify-center gap-6  ">
+        <img src="/Home.png" alt="" className="cursor-pointer bg-slate-100" />
+        <img src="/localization_icon.png" alt="" className="cursor-pointer" />
+        <img src="/Heart.png" alt="" className="cursor-pointer" />
+        <img src="/User.png" alt="" className="cursor-pointer" />
       </div>
     </div>
   );

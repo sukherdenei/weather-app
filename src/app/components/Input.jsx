@@ -1,6 +1,6 @@
 function Input({ searchHandler, searched, searchHandleClick }) {
   return (
-    <div className="relative  text-black columns-auto">
+    <div className="relative  text-black columns-auto w-[567px] h-[80px] bg-black justify-end">
       <div className="flex">
         <svg
           className="-mr-20 mt-5 relative "
@@ -29,7 +29,7 @@ function Input({ searchHandler, searched, searchHandleClick }) {
         {searched.length > 0 &&
           searched.slice(0, 10).map((city, index) => (
             <p
-              className="cursor-pointer text-2xl"
+              className="cursor-pointer text-3xl hover:bg-orange-100 border-1 w-[519px] border-2"
               key={index}
               onClick={() => searchHandleClick(city)}
             >
