@@ -27,6 +27,12 @@ const Right = ({ selectedcity, night, daynight, nightright }) => {
         return <img src="/nightsun.png" alt="" />;
       case condition.includes("freezing"):
         return <img src="Day.Wind.png" alt="" />;
+      case condition.includes("rain"):
+        return <img src="nightrain.png" alt="" />;
+      case condition.includes("fog"):
+        return <img src="/nightwind.png" alt="" />;
+      case condition.includes("overcast"):
+        return <img src="/nightclouds.png" alt="" />;
     }
   };
   // console.log(weatherIconRight(daynight));

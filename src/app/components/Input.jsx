@@ -1,6 +1,6 @@
 function Input({ searchHandler, searched, searchHandleClick }) {
   return (
-    <div className="relative  text-black columns-auto w-[567px] h-[80px] bg-black justify-end">
+    <div className="relative  text-black columns-auto w-[567px] h-[80px]  justify-end">
       <div className="flex">
         <svg
           className="-mr-20 mt-5 relative "

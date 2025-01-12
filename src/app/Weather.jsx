@@ -26,6 +26,8 @@ const Weather = ({ pic, daynight }) => {
 
       case condition.includes("sunny"):
         return <img src="Sun.png" alt="" />;
+      case condition.includes("freezing"):
+        return <img src="/Clouds.png" alt="" />;
     }
   };
   return (

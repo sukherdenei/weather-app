@@ -13,7 +13,6 @@ export default function Home() {
   const [weather, setWeather] = useState("-12");
   const [night, setNight] = useState("");
   const [daynight, setDaynight] = useState("");
-  // const [pic, setPic] = useState("");
   const [nightright, setNightRigth] = useState("");
 
   async function getData() {
